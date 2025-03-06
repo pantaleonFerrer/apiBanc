@@ -1,0 +1,1 @@
+export class ConversionRateNotFound extends Error { }
