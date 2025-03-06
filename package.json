@@ -1,0 +1,33 @@
+{
+  "name": "s",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --config nodemon.config.json ./src/express.ts",
+    "migrations:generate": "ts-node node_modules/typeorm/cli.js migration:generate persistence/migrations/ -d src/dataSourceConfig -o",
+    "migrations:run": "ts-node node_modules/typeorm/cli.js migration:run -d src/dataSourceConfig",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.9.1",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "typeorm": "^0.3.20",
+    "uuid": "^11.0.5"
+  }
+}
