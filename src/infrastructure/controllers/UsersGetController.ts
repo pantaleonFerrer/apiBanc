@@ -15,6 +15,7 @@ export class UsersGetController {
                 users
             })
         } catch (e) {
+            console.log(e)
             if (e instanceof Unauthorized) {
                 res.status(401).send(e.message)
                 return
