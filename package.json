@@ -6,7 +6,8 @@
     "dev": "nodemon --config nodemon.config.json ./src/express.ts",
     "migrations:generate": "ts-node node_modules/typeorm/cli.js migration:generate persistence/migrations/ -d src/dataSourceConfig -o",
     "migrations:run": "ts-node node_modules/typeorm/cli.js migration:run -d src/dataSourceConfig",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/express.js"
   },
   "author": "",
   "license": "ISC",
