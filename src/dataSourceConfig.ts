@@ -9,6 +9,7 @@ const dataSource = new DataSource({
     database: process.env.DB_NAME,
     synchronize: false,
     logging: false,
+    ssl: true,
     entities: [__dirname + '/**/*.schema.{ts,js}'],
     migrations: ['persistence/*.js'],
     type: 'postgres',
